@@ -1,11 +1,13 @@
 function dwarfRollCall(dwarves) {
+
   var text = "";
   for (var i = 0; i < dwarves.length; i++) {
     var position = i + 1;
     text += `${position}. ${dwarves[i]} `;
   }
   return text;
-}
+} 
+
 
 function summonCaptainPlanet(planeteerCalls){
   var newArray = [];
@@ -16,11 +18,12 @@ function summonCaptainPlanet(planeteerCalls){
 }
 
 function longPlaneteerCalls(words) {
-  if (words.length < 4) {
-    return false;
-  } else {
-    return true;
+  for (var i = 0; i < words.length; i++){
+    if (words[i].length > 4) {
+      return true;
+    } 
   }
+  return false;
 }
 
 function findTheCheese (foods) {
